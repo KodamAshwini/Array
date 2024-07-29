@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class SubstractionOfMatrix 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter size of Matrix1:");
+		int s1=sc.nextInt();
+		int[][] m1=new int[s1][s1];
+		System.out.println("Enter elements one by one:");
+		for (int i=0;i<=s1-1 ;i++ )
+		{
+			for (int j=0;j<=s1-1 ;j++ )
+			{
+				m1[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("Enter size of Matrix2:");
+		int s2=sc.nextInt();
+		int[][] m2=new int[s2][s2];
+		System.out.println("Enter elements one by one:");
+		for (int i=0;i<=s2-1 ;i++ )
+		{
+			for (int j=0;j<=s2-1 ;j++ )
+			{
+				m2[i][j]=sc.nextInt();
+			}
+		}
+		if(s1==s2){
+			for (int i=0;i<=s1-1 ;i++ )
+			{
+				for (int j=0;j<=s1-1 ;j++ )
+				{
+					System.out.print(" "+(m1[i][j]-m2[i][j])+" ");
+				}
+				System.out.println();
+			}
+		}
+	}
+}
